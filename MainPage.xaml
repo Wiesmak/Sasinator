@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Sasinator.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sasinator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Padding="0,0,0,0">
+        <TextBlock HorizontalAlignment="Center" Height="141" Margin="0,68,0,0" Text="SASINATOR" TextWrapping="NoWrap" Width="410" TextAlignment="Center" FontSize="72" FontWeight="Bold"/>
+        <StackPanel Background="{ThemeResource SystemControlAcrylicWindowBrush}">
+            <TextBlock Text="Przelicznik na uniwersalną jednostkę - sasin" TextWrapping="NoWrap" TextAlignment="Center" FontSize="36"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0" Width="Auto" >
+                <TextBox x:Name="Liczba" PlaceholderText="Wprowadź wartość" TextWrapping="NoWrap" Margin="0,0,10,0" VerticalAlignment="Stretch" GotFocus="Liczba_GotFocus"/>
+                <TextBlock x:Name="znak" Text="=" TextWrapping="NoWrap" Margin="0,0,10,0" VerticalAlignment="Center"/>
+                <TextBox x:Name="Sasin" TextWrapping="NoWrap" Margin="0,0,10,0" IsReadOnly="True"/>
+                <TextBlock x:Name="jednostka" Text="sasina" TextWrapping="NoWrap" Margin="0,0,10,0" VerticalAlignment="Center"/>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 20, 0, 0" Padding="0, 0, 0, 10">
+                <Button x:Name="Button" Content="Przelicz" HorizontalAlignment="Center" Margin="0,0,30,0" Click="Button_Click"/>
+                <Button x:Name="Zmiana" Content="⇆" Padding="15,4,15,5" Click="Zmiana_Click" />
+            </StackPanel>
+
+
+        </StackPanel>
+        <ProgressBar x:Name="Progress" Height="10" Width="650" Margin="0,20,0,0" LargeChange="0" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+            <ProgressBar.RenderTransform>
+                <CompositeTransform ScaleY="1"/>
+            </ProgressBar.RenderTransform>
+        </ProgressBar>
+
+    </StackPanel>
+</Page>
